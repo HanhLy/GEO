@@ -1,0 +1,100 @@
+/* ==========================================================================
+ Color
+========================================================================== */
+html{
+	--color-pink: #ab579f;
+	--color-pink-light: #de86d0;
+	--color-pink-dark: #7a2870;
+	--color-gray: #b2a7a8;
+	--color-gray-light: #e4d8d9;
+	--color-gray-dark: #827879;
+	--color-text: #0c0ca0;
+	--color-text-second: #6464c2;
+	--color-text-disabled: #a6a6dc;
+
+}
+
+
+/* ==========================================================================
+ Typography
+========================================================================== */
+html{
+	color: var(--color-text);
+	--font-primary: 'Assistant', Arial, sans-serif;
+	--font-secondary: 'Bitter', Arial, sans-serif;
+}
+a{
+	color: var(--color-pink-dark);
+}
+.secondary-font{
+	display: inline;
+	font-family: var(--font-secondary);
+	padding-left: 3px;
+}
+/* ==========================================================================
+ Header Component
+========================================================================== */
+header{
+	background-color: var(--color-pink-light);
+	font-family: var(--font-secondary);
+	padding: 2rem;
+}
+header li{
+	display: inline-block;
+}
+header a{
+	color: #f9faff;
+	padding: 0 10px;
+	text-decoration: none;
+}
+header a:hover{
+	color: black;
+}
+header a:active{
+	color: green;
+}
+header ul{
+	padding: 0;
+}
+header nav{
+	padding-top: 10px;
+}
+/* ==========================================================================
+ Footer Component
+========================================================================== */
+footer{
+	background-color: var(--color-gray-light);
+	font-family: var(--font-secondary);
+	margin-top: 1rem;
+	padding: 2rem;
+}
+/* ==========================================================================
+ Body Component
+========================================================================== */
+body{
+	font-family: var(--font-primary);
+}
+main{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80%;
+}
+h3{
+	font-size: 1.5rem;
+}
+/* ==========================================================================
+ Example
+========================================================================== */
+.color-swatch{
+	padding: 0 12px;
+}
+.primary-font-exp{
+	background-color: var(--color-pink-light);
+	font-family: var(--font-primary);
+	padding: 1px;
+}
+.secondary-font-exp{
+	background-color: var(--color-pink-light);
+	font-family: var(--font-secondary);
+	padding: 1px;
+}
