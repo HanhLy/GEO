@@ -1,7 +1,7 @@
 /* ==========================================================================
  Color
 ========================================================================== */
-html{
+html {
 	--color-pink: #ab579f;
 	--color-pink-light: #de86d0;
 	--color-pink-dark: #7a2870;
@@ -17,7 +17,7 @@ html{
 /* ==========================================================================
  Typography
 ========================================================================== */
-html{
+html {
 	color: var(--color-text);
 	--font-primary: 'Assistant', Arial, sans-serif;
 	--font-secondary: 'Bitter', Arial, sans-serif;
@@ -33,31 +33,34 @@ html{
 
 	line-height: 1.3;
 }
-h6{
+
+h6 {
 	font-size: var(--size-one-up);
 }
-h5{
+
+h5 {
 	font-size: var(--size-two-up);
 }
-h4{
+
+h4 {
 	font-size: var(--size-three-up);
 }
-h3{
+
+h3 {
 	font-size: var(--size-four-up);
+
 }
-h2{
+
+h2 {
 	font-size: var(--size-five-up);
 }
-h1{
+
+h1 {
 	font-size: var(--size-six-up);
 }
+
 a{
 	color: var(--color-pink-dark);
-}
-.secondary-font{
-	display: inline;
-	font-family: var(--font-secondary);
-	padding-left: 3px;
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0.5rem 0 0.5rem;
@@ -70,74 +73,89 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
 /* ==========================================================================
  Header Component
 ========================================================================== */
-header{
+header {
 	background-color: var(--color-pink-light);
 	font-family: var(--font-secondary);
 	padding: 2rem;
 }
-header li{
+
+header li {
 	display: inline-block;
 }
-header a{
+
+header a {
 	color: #f9faff;
 	padding: 0 10px;
 	text-decoration: none;
 }
-.header-logo{
+
+.header-logo {
 	color: var(--color-light-gray);
 	font-size: var(--size-five-up);
 	font-style: italic;
 }
-header a:hover{
+
+header a:hover {
 	color: black;
 }
-header a:active{
+
+header a:active {
 	color: green;
 }
-header ul{
+
+header ul {
 	padding: 0;
 }
-header nav{
+
+header nav {
 	padding-top: 10px;
 }
+
 /* ==========================================================================
  Footer Component
 ========================================================================== */
-footer{
+footer {
 	background-color: var(--color-gray-light);
 	font-family: var(--font-secondary);
 	font-size: var(--size-one-down);
 	margin-top: 1rem;
 	padding: 2rem;
 }
-footer li{
+
+footer li {
 	display: inline-block;
 }
-footer ul{
+
+footer ul {
 	padding-left: 0;
 }
-footer a{
+
+footer a {
 	padding: 0 10px;
 	text-decoration: none;
 }
-footer a:hover{
+
+footer a:hover {
 	color: black;
 }
- footer a:active{
+
+ footer a:active {
 	color: green;
 }
+
 /* ==========================================================================
  Body Component
 ========================================================================== */
-body{
+body {
 	font-family: var(--font-primary);
 	margin-top: 0;
 }
-main{
+
+main {
 	margin-top: 2rem;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 80%;
+	max-width: 62rem;
 }
 
 /* ==========================================================================
@@ -151,13 +169,18 @@ main{
 	font-family: var(--font-primary);
 	padding: 1px;
 }
+.secondary-font{
+	display: inline;
+	font-family: var(--font-secondary);
+	padding-left: 3px;
+}
 .secondary-font-exp{
 	background-color: var(--color-pink-light);
 	font-family: var(--font-secondary);
 	margin-bottom: 4rem;
 	padding: 1px;
 }
-.style-headings p{
+.heading-list p {
 	font-size: var(--size-two-up);
 	margin: 0;
 }
@@ -176,4 +199,36 @@ main{
 }
 .style-list{
 	list-style-position: inside;
+}
+.hero-button{
+	background-color: #879979;
+	border-radius: 1rem;
+	box-shadow: 0 1px 5px #cfcecd;
+	color: #ffe8e4;
+	display: inline-block;
+	font-size: 1.2rem;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+}
+.normal-button{
+	background-color: #a3d5d7;
+	border-radius: 1rem;
+	box-shadow: 0 1px 5px #cfcecd;
+	color: #2b243c;
+	display: inline-block;
+	font-size: 1.2rem;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+}
+.tertiary-buton{
+	border: 2px solid #161f25;
+	border-radius: 1rem;
+	box-shadow: 0 1px 5px #cfcecd;
+	display: inline-block;
+	font-size: 1.2rem;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+}
+.detail{
+	color: var(--color-gray-dark);
 }
