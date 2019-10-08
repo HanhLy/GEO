@@ -48,6 +48,7 @@ h4 {
 
 h3 {
 	font-size: var(--size-four-up);
+	padding-top: 1rem;
 
 }
 
@@ -58,10 +59,10 @@ h2 {
 h1 {
 	font-size: var(--size-six-up);
 }
-
+/*
 a{
 	color: var(--color-pink-dark);
-}
+}*/
 h1, h2, h3, h4, h5, h6 {
   margin: 0.5rem 0 0.5rem;
  }
@@ -76,7 +77,7 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
 header {
 	background-color: var(--color-pink-light);
 	font-family: var(--font-secondary);
-	padding: 2rem;
+	padding: 1.5rem;
 }
 
 header li {
@@ -118,8 +119,8 @@ footer {
 	background-color: var(--color-gray-light);
 	font-family: var(--font-secondary);
 	font-size: var(--size-one-down);
-	margin-top: 1rem;
-	padding: 2rem;
+	margin-top: 3rem;
+	padding: 1rem;
 }
 
 footer li {
@@ -161,46 +162,52 @@ main {
 /* ==========================================================================
  Example
 ========================================================================== */
-.color-swatch{
+.color-swatch {
 	padding: 0 1.5rem;
 }
-.primary-font-exp{
+
+.primary-font-exp {
 	background-color: var(--color-pink-light);
 	font-family: var(--font-primary);
 	padding: 1px;
 }
-.secondary-font{
+
+.secondary-font {
 	display: inline;
 	font-family: var(--font-secondary);
 	padding-left: 3px;
 }
-.secondary-font-exp{
+
+.secondary-font-exp {
 	background-color: var(--color-pink-light);
 	font-family: var(--font-secondary);
-	margin-bottom: 4rem;
+	/*margin-bottom: 4rem;*/
 	padding: 1px;
 }
+
 .heading-list p {
 	font-size: var(--size-two-up);
 	margin: 0;
 }
-.style-bodytext{
-	padding-top: 2rem;
-}
-.style-bodytext h5 {
+
+.feature-text {
 	margin-left: 2rem;
-	font-weight: normal;
+	font-size: var(--size-three-up);
 }
-.style-bodytext p{
+
+.style-bodytext p {
 	margin-left: 2rem;
 }
-.style-tertiary{
+
+.style-tertiary {
 	font-size: var(--size-one-down);
 }
-.style-list{
+
+.style-list {
 	list-style-position: inside;
 }
-.hero-button{
+
+.hero-button {
 	background-color: #879979;
 	border-radius: 1rem;
 	box-shadow: 0 1px 5px #cfcecd;
@@ -210,7 +217,17 @@ main {
 	padding: 1rem 1.5rem;
 	text-decoration: none;
 }
-.normal-button{
+
+.hero-button:hover {
+	background-color: #515b48;
+}
+
+.hero-button:active {
+	background-color: #9fad93;
+	/*color: black;*/
+}
+
+.normal-button {
 	background-color: #a3d5d7;
 	border-radius: 1rem;
 	box-shadow: 0 1px 5px #cfcecd;
@@ -220,7 +237,18 @@ main {
 	padding: 1rem 1.5rem;
 	text-decoration: none;
 }
-.tertiary-buton{
+
+.normal-button:hover {
+	background-color: #82aaac;
+	color: white;
+}
+
+.normal-button:active {
+	background-color: #92bfc1;
+	color: white/*#5456c7*/;
+}
+
+.tertiary-buton {
 	border: 2px solid #161f25;
 	border-radius: 1rem;
 	box-shadow: 0 1px 5px #cfcecd;
@@ -229,6 +257,88 @@ main {
 	padding: 1rem 1.5rem;
 	text-decoration: none;
 }
+
+.tertiary-buton:hover {
+	background-color: #b9ae93;
+	color: black;
+}
+
+.tertiary-buton:active {
+	background-color: #cecb93;
+	/*color: white;*/
+}
+
+summary {
+	border-bottom: 2px solid #a98d49;
+	padding: 0.5rem;
+}
+
 .detail{
-	color: var(--color-gray-dark);
+	padding-left: 1.5rem;
+}
+summary {
+     list-style-image: url(arrowright.svg);
+}
+
+summary::-webkit-details-marker {
+     background: url(arrowright.svg);
+     color: transparent;
+}
+
+details[open] summary::-webkit-details-marker {
+    background: url(arrowdown.svg);
+}
+
+dialog {
+	border: none;
+	border-left: 6px solid var(--color-pink-dark);
+	border-radius: 1rem;
+	box-shadow: 5px 5px 5px rgba( 0, 0, 0, .5 );
+	color: var(--color-text);
+	max-width: 25rem;
+	padding: 1.5rem 2.5rem;
+}
+
+#open-modal {/*
+	background-color: #552;*/
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+dialog[open] {
+	animation: dialog-pop 1s ease;
+}
+
+@keyframes dialog-pop {
+	0% {
+		opacity: 0;
+		transform: scale(.1);
+	}
+	
+	60% {
+		transform: scale(1.1);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	
+}
+
+dialog::backdrop {
+	animation: backdrop 1s ease-out;
+}
+
+@keyframes backdrop {
+	0% {
+		background-color: rgba(0,0,0, .3);
+		opacity: 0;
+		transform: translatey(-100vw);
+	}
+	
+	100% {
+		background-color: rgba(0,0,0, .1);
+		transform: translatey(0);
+	}
 }

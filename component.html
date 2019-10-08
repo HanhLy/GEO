@@ -21,28 +21,50 @@
 	</header>
 	<main>
 		<h1>Geo Components</h1>
-		<h2>Link Buttons</h2>
-		<section>
+		<h3>Link Buttons</h3>
+		<figure>
 			<h4>Hero</h4>
 			<a href="" class="hero-button">Button</a>
 			<h4>Normal</h4>
 			<a href="" class="normal-button">Button</a>
 			<h4>Tertiary</h4>
 			<a href="" class="tertiary-buton">Button</a>
-		</section>
-		<h2>Accordions</h2>
-		<details>
-			<summary>Title</summary>
-			<div class="detail">
-				<P>Detail 1</P>
-				<P>Detail 2</P>
-				<P>Detail 3</P>
-			</div>
-		</details>
+		</figure>
+		<h3>Accordions</h3>
+		<figure>
+			<details>
+				<summary>Title</summary>
+				<div class="detail">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</details>
+			<details>
+				<summary>Title</summary>
+				<div class="detail">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</details>
+			<details>
+				<summary>Title</summary>
+				<div class="detail">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</details>
+		</figure>
+		<h3>Modal Dialog</h3>
+		<figure>
+			<button id="open-modal" type="button">Open Modal</button>
+			<dialog id="modal-demo">
+	
+				<h2>Modal Subject</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				
+			</dialog>
+		</figure>
 	</main>
 	<footer>
 		<p>Created by Hanh Ly</p>
-		<p>My name is Hanh, I live in Austin,TX.Currently UX student at ACC</p>
+		<p>My name is Hanh, I live in Austin,TX. I'm an UX student at ACC</p>
 		<nav>
 			<ul>
 				<li><a href="https://www.google.com/">Github</a></li>
@@ -52,5 +74,24 @@
 		</nav>
 		<p>Copyright &copy; Hanh Website 2019</p>
 	</footer>
+	    <script>
+			document.addEventListener('DOMContentLoaded', function(){
+
+			const modal = document.querySelector('dialog');
+			const open = document.getElementById('open-modal');
+
+			open.addEventListener('click', () => {
+			modal.showModal();
+			});
+
+			modal.addEventListener('click', event => {
+			if (event.target === modal) {
+			modal.close('cancelled');
+			}
+			});
+
+			});
+		</script>
+
 </body>
 </html>
