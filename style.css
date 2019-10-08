@@ -59,18 +59,17 @@ h2 {
 h1 {
 	font-size: var(--size-six-up);
 }
-/*
-a{
-	color: var(--color-pink-dark);
-}*/
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0.5rem 0 0.5rem;
  }
+
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
 	color: var(--color-gray-dark);
 	font-family: var(--font-primary);
 	font-style: normal;
 }
+
 /* ==========================================================================
  Header Component
 ========================================================================== */
@@ -181,7 +180,6 @@ main {
 .secondary-font-exp {
 	background-color: var(--color-pink-light);
 	font-family: var(--font-secondary);
-	/*margin-bottom: 4rem;*/
 	padding: 1px;
 }
 
@@ -224,7 +222,6 @@ main {
 
 .hero-button:active {
 	background-color: #9fad93;
-	/*color: black;*/
 }
 
 .normal-button {
@@ -245,7 +242,7 @@ main {
 
 .normal-button:active {
 	background-color: #92bfc1;
-	color: white/*#5456c7*/;
+	color: white;
 }
 
 .tertiary-buton {
@@ -265,7 +262,6 @@ main {
 
 .tertiary-buton:active {
 	background-color: #cecb93;
-	/*color: white;*/
 }
 
 summary {
@@ -299,8 +295,7 @@ dialog {
 	padding: 1.5rem 2.5rem;
 }
 
-#open-modal {/*
-	background-color: #552;*/
+#open-modal {
 	border-radius: 0.5rem;
 	padding: 1rem;
 }
