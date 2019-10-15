@@ -19,6 +19,7 @@
 			</ul>
 		</nav>
 	</header>
+
 	<main>
 		<h1>Geo Components</h1>
 		<h3>Link Buttons</h3>
@@ -46,7 +47,7 @@
 			</details>
 			<details>
 				<summary>Title</summary>
-				<div class="detail">
+				<div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				</div>
 			</details>
@@ -60,6 +61,51 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 				
 			</dialog>
+		</figure>
+		<h3>Form Inputs</h3>
+		<h5>Text</h5>
+		<figure>
+			<form>
+				<label for="label-name">Label</label>
+				<input type="text" id="label-name" name="label-data" required>
+				<small class="form-microcopy">This is the help text</small>
+			</form>
+		</figure>
+		<h5>Input Error</h5>
+			<figure>
+				<form>
+					<label for="error">Label</label>
+					<input type="text" name="error" class="error">
+					<p class="error-message">Error Message</p>
+				</form>
+			</figure>
+		<h5>Text Disable</h5>
+			<figure>
+				<form>
+					<label for="disable-input">Label</label>
+					<input id="disaple-input" name="title" disabled>
+				</form>
+			</figure>
+		<h5>Text Area</h5>
+		<figure>
+			<form>
+			<label for="message">Text Area</label>
+			<textarea id="message" name="message" placeholder="Enter message"></textarea>
+			</form>
+		</figure>
+		<h5>Select Bar</h5>
+		<figure>
+			<label for="select-bar">Select</label>
+			<select id="select-bar" name="select-bar">
+			<option disabled hidden selected>Choose</option>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			</select>
+		</figure>
+		<h5>Submit/Button</h5>
+		<figure>
+			<input type="submit" value="Submit">
 		</figure>
 	</main>
 	<footer>
