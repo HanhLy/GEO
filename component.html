@@ -10,11 +10,11 @@
 <body>
 	<header>
 		<a href="home.html" class="header-logo">Geo</a>
-		<nav>
+		<nav class="page-nav">
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
-				<li><a href="component.html">Components</a></li>
+				<li ><a href="component.html" class="current-page">Components</a></li>
 				<li><a href="layout.html">Layout</a></li>
 			</ul>
 		</nav>
@@ -22,7 +22,7 @@
 
 	<main>
 		<h1>Geo Components</h1>
-		<h3>Link Buttons</h3>
+		<h2>Link Buttons</h2>
 		<figure>
 			<h4>Hero</h4>
 			<a href="" class="hero-button">Button</a>
@@ -31,7 +31,7 @@
 			<h4>Tertiary</h4>
 			<a href="" class="tertiary-buton">Button</a>
 		</figure>
-		<h3>Accordions</h3>
+		<h2>Accordions</h2>
 		<figure>
 			<details>
 				<summary>Title</summary>
@@ -52,9 +52,9 @@
 				</div>
 			</details>
 		</figure>
-		<h3>Modal Dialog</h3>
+		<h2>Modal Dialog</h2>
 		<figure>
-			<button id="open-modal" type="button">Open Modal</button>
+			<button id="open-modal" type="button" class="open-modal">Open Modal</button>
 			<dialog id="modal-demo">
 	
 				<h2>Modal Subject</h2>
@@ -62,16 +62,16 @@
 				
 			</dialog>
 		</figure>
-		<h3>Form Inputs</h3>
-		<h5>Text</h5>
+		<h2>Form Inputs</h2>
+		<h3>Text</h3>
 		<figure>
 			<form>
 				<label for="label-name">Label</label>
-				<input type="text" id="label-name" name="label-data" required>
+				<input type="text" id="label-name" name="label-data" placeholder="Input Text" required>
 				<small class="form-microcopy">This is the help text</small>
 			</form>
 		</figure>
-		<h5>Input Error</h5>
+		<h3>Input Error</h3>
 			<figure>
 				<form>
 					<label for="error">Label</label>
@@ -79,21 +79,21 @@
 					<p class="error-message">Error Message</p>
 				</form>
 			</figure>
-		<h5>Text Disable</h5>
+		<h3>Text Disable</h3>
 			<figure>
 				<form>
 					<label for="disable-input">Label</label>
 					<input id="disaple-input" name="title" disabled>
 				</form>
 			</figure>
-		<h5>Text Area</h5>
+		<h3>Text Area</h3>
 		<figure>
 			<form>
 			<label for="message">Text Area</label>
 			<textarea id="message" name="message" placeholder="Enter message"></textarea>
 			</form>
 		</figure>
-		<h5>Select Bar</h5>
+		<h3>Select Bar</h3>
 		<figure>
 			<label for="select-bar">Select</label>
 			<select id="select-bar" name="select-bar">
@@ -103,9 +103,36 @@
 			<option>Option 3</option>
 			</select>
 		</figure>
-		<h5>Submit/Button</h5>
+		<h3>Submit/Button</h3>
 		<figure>
 			<input type="submit" value="Submit">
+		</figure>
+		<h2>Navigation</h2>
+		<h3>Primary Navigation</h3>
+		<figure>
+			<nav class="page-nav nav-background">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">File</a></li>
+				<li ><a href="" class="current-page">Edit</a></li>
+				<li><a href="">Help</a></li>
+			</ul>
+		</nav>
+		</figure>
+		<h3>Secondary Navigation</h3>
+		<figure>
+			<nav class="second-nav nav-background">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">File</a></li>
+				<li ><a href="" class="current-page">Edit</a></li>
+				<ul>
+					<li>d</li>
+					<li>e</li>
+					<li>f</li>
+				</ul>
+				<li><a href="">Help</a></li>
+			</ul>
 		</figure>
 	</main>
 	<footer>

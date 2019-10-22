@@ -22,7 +22,7 @@ html {
 	--font-primary: 'Assistant', Arial, sans-serif;
 	--font-secondary: 'Bitter', Arial, sans-serif;
 	
-	--size-ratio: 1.2;
+	--size-ratio: 1.15;
 	--size-six-up: calc( var(--size-five-up) * var(--size-ratio) );
 	--size-five-up: calc( var(--size-four-up) * var(--size-ratio) );
 	--size-four-up: calc( var(--size-three-up) * var(--size-ratio) );
@@ -48,7 +48,7 @@ h4 {
 
 h3 {
 	font-size: var(--size-four-up);
-	padding-top: 1rem;
+	/*padding-top: 1rem;*/
 
 }
 
@@ -61,13 +61,41 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0.5rem 0 0.5rem;
+  margin: 2rem 0 1em;
  }
 
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
 	color: var(--color-gray-dark);
 	font-family: var(--font-primary);
 	font-style: normal;
+}
+
+.feature-text {
+	margin-left: 2rem;
+	font-size: var(--size-two-up);
+}
+
+.style-bodytext p {
+	margin-left: 2rem;
+}
+
+.style-tertiary {
+	font-size: var(--size-one-down);
+}
+
+@media ( min-width: 700px ) {
+	
+	html {
+		font-size: 17px;
+	}
+	
+}
+
+@media ( min-width: 1100px ) {
+	
+	html {
+		font-size: 18px;
+	}
 }
 
 /* ==========================================================================
@@ -79,14 +107,11 @@ header {
 	padding: 1.5rem;
 }
 
-header li {
-	display: inline-block;
-}
-
 header a {
 	color: #f9faff;
-	padding: 0 10px;
+	padding: 0 1rem;
 	text-decoration: none;
+	transition: all 0.75s ease;
 }
 
 .header-logo {
@@ -96,19 +121,57 @@ header a {
 }
 
 header a:hover {
-	color: black;
+	background-color: var(--color-pink-dark);
+	border-radius: 1rem;
+	transition: all 0.75s ease;
 }
 
 header a:active {
 	color: green;
 }
 
-header ul {
+header li {
 	padding: 0;
 }
 
 header nav {
 	padding-top: 10px;
+}
+
+header ul {
+	padding-left: 1rem;
+}
+
+/* ==========================================================================
+ Nav Component
+========================================================================== */
+.page-nav a, .second-nav a {
+	border-bottom: 2px solid rgb( 236,236,236);
+	color: #f9faff;
+	display: block;
+	padding: 1.2rem;
+	text-decoration: none;
+}
+
+.page-nav li, .second-nav li {
+	list-style: none;
+}
+
+@media (min-width: 550px) {
+	.page-nav li {
+		display: inline;
+	}
+
+	.page-nav a {
+		border: none;
+		display: inline-block;
+	}
+}
+
+.current-page {
+	background-color: #587884;
+	border-radius: 0.5rem;
+	padding: 0.2rem;
 }
 
 /* ==========================================================================
@@ -148,16 +211,23 @@ footer a:hover {
 ========================================================================== */
 body {
 	font-family: var(--font-primary);
-	margin-top: 0;
+	margin: 0;
 }
 
 main {
 	margin-top: 2rem;
-	margin-left: auto;
-	margin-right: auto;
 	max-width: 62rem;
+	padding: 1.2rem;
 }
 
+@media ( min-width: 675px ) {
+	
+	main {
+		margin: auto;
+		max-width: 50rem;
+	}
+	
+}
 /* ==========================================================================
  Example
 ========================================================================== */
@@ -188,22 +258,17 @@ main {
 	margin: 0;
 }
 
-.feature-text {
-	margin-left: 2rem;
-	font-size: var(--size-three-up);
-}
-
-.style-bodytext p {
-	margin-left: 2rem;
-}
-
-.style-tertiary {
-	font-size: var(--size-one-down);
+.nav-background {
+	background-color: var(--color-pink-light);
 }
 
 .style-list {
 	list-style-position: inside;
 }
+
+/* ==========================================================================
+ Button Component
+========================================================================== */
 
 .hero-button {
 	background-color: #879979;
@@ -264,6 +329,10 @@ main {
 	background-color: #cecb93;
 }
 
+
+/* ==========================================================================
+ Summary Component
+========================================================================== */
 summary {
 	border-bottom: 2px solid #a98d49;
 	padding: 0.5rem;
@@ -287,6 +356,11 @@ details[open] summary::-webkit-details-marker {
     background-repeat: no-repeat;
 }
 
+
+/* ==========================================================================
+ Modal Component
+========================================================================== */
+
 dialog {
 	border: none;
 	border-left: 6px solid var(--color-pink-dark);
@@ -297,7 +371,8 @@ dialog {
 	padding: 1.5rem 2.5rem;
 }
 
-#open-modal {
+.open-modal {
+	border: 2px solid rgba(0,0,10, .5);
 	border-radius: 0.5rem;
 	padding: 1rem;
 }
@@ -340,6 +415,10 @@ dialog::backdrop {
 	}
 }
 
+/* ==========================================================================
+ Form
+========================================================================== */
+
 label {
 	display: block;
 }
@@ -364,6 +443,10 @@ input, select, textarea {
 	-webkit-appearance:none;
 }
 
+input:focus, select:focus, textarea:focus {
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+	outline: none;
+}
 .error {
 	border: 1px solid red;
 	color: red;
@@ -377,22 +460,24 @@ input, select, textarea {
 
 input[disabled] {
 	background-color: lightgray;
+	border: 1px solid rgba(0,0,0, 0.4);
 }
 
-input[type="submit"] {
+button, input[type="submit"] {
 	background-color: var(--color-pink);
 	color: white;
 	min-width: inherit;
 	padding: 0.5rem 0.5rem;
 }
 
-input[type="submit"]:hover {
+button, input[type="submit"]:hover {
 	background-color: var(--color-pink-dark);
 	cursor: pointer;
 }
 
-input[type="submit"]:active {
-	background-color: var(--color-gray-dark);
+button, input[type="submit"]:active {
+	background-color: var(--color-pink);
 	color: white;
 	cursor: pointer;
 }
+	
