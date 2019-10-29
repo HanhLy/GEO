@@ -93,11 +93,29 @@
 			<textarea id="message" name="message" placeholder="Enter message"></textarea>
 			</form>
 		</figure>
+		<h3>Text Area Error</h3>
+		<figure>
+			<form>
+			<label for="message">Text Area Error</label>
+			<textarea class="error" id="message" name="message"></textarea>
+			<p class="error-message">Error Message</p>
+			</form>
+		</figure>
 		<h3>Select Bar</h3>
 		<figure>
 			<label for="select-bar">Select</label>
 			<select id="select-bar" name="select-bar">
 			<option disabled hidden selected>Choose</option>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			</select>
+		</figure>
+		<h3>Select Bar Error</h3>
+		<figure>
+			<label for="select-bar">Select</label>
+			<select id="select-bar" name="select-bar" class="error">
+			<option disabled hidden selected>Choose Again</option>
 			<option>Option 1</option>
 			<option>Option 2</option>
 			<option>Option 3</option>
@@ -109,8 +127,8 @@
 		</figure>
 		<h2>Navigation</h2>
 		<h3>Primary Navigation</h3>
-		<figure>
-			<nav class="page-nav nav-background">
+		<figure class=" nav-background">
+			<nav class="page-nav">
 			<ul>
 				<li><a href="">Home</a></li>
 				<li><a href="">File</a></li>
@@ -120,8 +138,8 @@
 		</nav>
 		</figure>
 		<h3>Secondary Navigation</h3>
-		<figure>
-			<nav class="second-nav nav-background">
+		<figure class=" nav-background">
+			<nav class="second-nav">
 			<ul>
 				<li><a href="">Home</a></li>
 				<li><a href="">File</a></li>
@@ -133,6 +151,36 @@
 				</ul>
 				<li><a href="">Help</a></li>
 			</ul>
+		</figure>
+		<h2>Notifications</h2>
+		<h3>Error</h3>
+		<figcaption class="notification error-notification">
+			<img src="images/cross.svg"" width="30px" height="30px">
+			<p>Notification Title</br>
+			Subtitle text</p>
+		</figcaption>
+		<h3>Warning</h3>
+		<figcaption class="notification warning-notification">
+			<img src="images/error.png" width="30px" height="30px">
+			<p>Notification Title</br>
+			Subtitle text</p>
+		</figcaption>
+		<h3>Neutral</h3>
+		<figcaption class="notification neutral-notification">
+			<img src="images/bell.png" width="30px" height="30px">
+			<p>Notification Title</br>
+			Subtitle text</p>
+		</figcaption>
+		<h3>Success</h3>
+		<figcaption class="notification success-notification">
+			<img src="images/checked.png" width="30px" height="30px">
+			<p>Notification Title</br>
+			Subtitle text</p>
+		</figcaption>
+		<h2>Hero Block</h2>
+		<figure class="hero-example">
+			<a href="hero-block.html"><img src="images/hero-block.png"></a>
+			<a href=""></a>
 		</figure>
 	</main>
 	<footer>
