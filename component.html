@@ -62,6 +62,7 @@
 				
 			</dialog>
 		</figure>
+
 		<h2>Form Inputs</h2>
 		<h3>Text</h3>
 		<figure>
@@ -71,54 +72,57 @@
 				<small class="form-microcopy">This is the help text</small>
 			</form>
 		</figure>
+
 		<h3>Input Error</h3>
-			<figure>
-				<form>
-					<label for="error">Label</label>
-					<input type="text" name="error" class="error">
-					<p class="error-message">Error Message</p>
-				</form>
-			</figure>
+		<figure>
+			<form>
+				<label for="error">Label</label>
+				<input type="text" name="error" class="error">
+				<p class="error-message">Error Message</p>
+			</form>
+		</figure>
+
 		<h3>Text Disable</h3>
-			<figure>
-				<form>
-					<label for="disable-input">Label</label>
-					<input id="disaple-input" name="title" disabled>
-				</form>
-			</figure>
+		<figure>
+			<form>
+				<label for="disable-input">Label</label>
+				<input id="disaple-input" name="title" disabled>
+			</form>
+		</figure>
+
 		<h3>Text Area</h3>
 		<figure>
 			<form>
-			<label for="message">Text Area</label>
-			<textarea id="message" name="message" placeholder="Enter message"></textarea>
+				<label for="message">Text Area</label>
+				<textarea id="message" name="message" placeholder="Enter message"></textarea>
 			</form>
 		</figure>
 		<h3>Text Area Error</h3>
 		<figure>
 			<form>
-			<label for="message">Text Area Error</label>
-			<textarea class="error" id="message" name="message"></textarea>
-			<p class="error-message">Error Message</p>
+				<label for="message">Text Area Error</label>
+				<textarea class="error" id="message" name="message"></textarea>
+				<p class="error-message">Error Message</p>
 			</form>
 		</figure>
 		<h3>Select Bar</h3>
 		<figure>
 			<label for="select-bar">Select</label>
 			<select id="select-bar" name="select-bar">
-			<option disabled hidden selected>Choose</option>
-			<option>Option 1</option>
-			<option>Option 2</option>
-			<option>Option 3</option>
+				<option disabled hidden selected>Choose</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
 			</select>
 		</figure>
 		<h3>Select Bar Error</h3>
 		<figure>
 			<label for="select-bar">Select</label>
 			<select id="select-bar" name="select-bar" class="error">
-			<option disabled hidden selected>Choose Again</option>
-			<option>Option 1</option>
-			<option>Option 2</option>
-			<option>Option 3</option>
+				<option disabled hidden selected>Choose Again</option>
+				<option>Option 1</option>
+				<option>Option 2</option>
+				<option>Option 3</option>
 			</select>
 		</figure>
 		<h3>Submit/Button</h3>
@@ -143,44 +147,84 @@
 			<ul>
 				<li><a href="">Home</a></li>
 				<li><a href="">File</a></li>
-				<li ><a href="" class="current-page">Edit</a></li>
+				<li ><a href="" class="current-page">Edit</a>
 				<ul>
 					<li>d</li>
 					<li>e</li>
 					<li>f</li>
 				</ul>
+				</li>
 				<li><a href="">Help</a></li>
 			</ul>
 		</figure>
 		<h2>Notifications</h2>
 		<h3>Error</h3>
-		<figcaption class="notification error-notification">
-			<img src="images/cross.svg"" width="30px" height="30px">
+		<figure class="notification error-notification">
+			<img src="images/cross.svg">
 			<p>Notification Title</br>
 			Subtitle text</p>
-		</figcaption>
+			<img src="images/cancel.png">
+		</figure>
 		<h3>Warning</h3>
-		<figcaption class="notification warning-notification">
-			<img src="images/error.png" width="30px" height="30px">
+		<figure class="notification warning-notification">
+			<img src="images/error.png">
 			<p>Notification Title</br>
 			Subtitle text</p>
-		</figcaption>
+			<img src="images/cancel.png">
+		</figure>
 		<h3>Neutral</h3>
-		<figcaption class="notification neutral-notification">
-			<img src="images/bell.png" width="30px" height="30px">
+		<figure class="notification neutral-notification">
+			<img src="images/bell.png">
 			<p>Notification Title</br>
 			Subtitle text</p>
-		</figcaption>
+			<img src="images/cancel.png">
+		</figure>
 		<h3>Success</h3>
-		<figcaption class="notification success-notification">
-			<img src="images/checked.png" width="30px" height="30px">
+		<figure class="notification success-notification">
+			<img src="images/checked.png">
 			<p>Notification Title</br>
 			Subtitle text</p>
-		</figcaption>
+			<img src="images/cancel.png">
+		</figure>
+
 		<h2>Hero Block</h2>
 		<figure class="hero-example">
 			<a href="hero-block.html"><img src="images/hero-block.png"></a>
 			<a href=""></a>
+		</figure>
+
+		<h2>Information Cards</h2>
+		<h3>Article</h3>
+		<figure class="card-article">
+			<a href="">
+				<img src="images/card-art.jpg">
+				<div>
+					<h4>Article</h4>
+					<p>Unicorn godard voluptate chillwave waistcoat laboris vegan. Offal dolore forage cred consequat chicharrones.</p>
+					<small>MM/DD/YYYY</small>
+				</div>
+			</a>
+		</figure>
+
+		<h3>Profile</h3>
+		<figure class="card-profile">
+			<a href="">
+				<img src="images/avatar.jpg">
+				<div>
+					<h4>Jason Masew</h4>
+					<a>Email: jmasew@gmail.com</a>
+					<a>Phone Number: 512-333-8878</a>
+				</div>
+			</a>
+		</figure>
+
+		<h3>Call to action</h3>
+		<figure class="card-action">
+				<img src="images/action-card.jpg">
+				<div>
+					<h5>Duis ramps you probably haven't heard of them shoreditch enamel pin ut.</h5>
+					<button> Learn More</button>
+				</div>
 		</figure>
 	</main>
 	<footer>

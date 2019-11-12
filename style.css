@@ -11,6 +11,7 @@ html {
 	--color-text: #0c0ca0;
 	--color-text-second: #6464c2;
 	--color-text-disabled: #a6a6dc;
+	--error-red: #DE1F34;
 }
 
 
@@ -110,7 +111,7 @@ header a {
 	color: #f9faff;
 	padding: 0 1rem;
 	text-decoration: none;
-	transition: background-color .75s ease;
+	transition: background-color .75s ease, border-radius .8s ease;
 }
 
 .header-logo {
@@ -122,8 +123,7 @@ header a {
 .page-nav a:hover, .second-nav a:hover {
 	background-color: var(--color-pink-dark);
 	border-radius: 1rem;
-	transition: background-color .75s ease;/*
-	animation-name: slide 1s ease;*/
+	transition: background-color .75s ease, border-radius .8s ease;
 }
 
 .page-nav a:active {
@@ -266,6 +266,10 @@ main {
 
 .style-list {
 	list-style-position: inside;
+}
+
+.hero-example img {
+	max-width: 80%;
 }
 
 /* ==========================================================================
@@ -455,7 +459,7 @@ input:focus, select:focus, textarea:focus {
 }
 .error {
 	border: 1px solid red;
-	color: red;
+	color: var(--error-red);
 }
 
 .error-message {
@@ -476,12 +480,12 @@ button, input[type="submit"] {
 	padding: 0.5rem 0.5rem;
 }
 
-button, input[type="submit"]:hover {
+input[type="submit"]:hover {
 	background-color: var(--color-pink-dark);
 	cursor: pointer;
 }
 
-button, input[type="submit"]:active {
+input[type="submit"]:active {
 	background-color: var(--color-pink);
 	color: white;
 	cursor: pointer;
@@ -498,12 +502,29 @@ button, input[type="submit"]:active {
 	color: white;
 	display: flex;
 	justify-content: space-evenly;
-	max-width: 35%;
+	max-width: 40%;
 	margin-left: 2rem;
+	position: relative;
 }
+
+.notification img:first-child {
+	height: 30px;
+	width: 30px; 
+}
+
+.notification img:last-child {
+	height: 20px;
+	/*padding-left: 2rem;*/
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	width: 20px; 
+}
+
 .cancel {
 	align-items: flex-end;
 }
+
 .error-notification {
 	border-left: 10px solid #E22424;
 }
@@ -532,17 +553,194 @@ button, input[type="submit"]:active {
 	display: flex;
 	flex-direction: column;
 	font-size: 25px;
-	height: 90vh;
+	min-height: 90vh;
 	justify-content: center;
 	padding-left: 10rem;
 	text-shadow: 2px 2px 10px black;
 }
-.hero-block button {
-	background-color: #41A78C;
+.hero-block .hero-button {
 	box-shadow: 2px 2px 5px black;
-	margin-left: 7rem;
+	margin-left: 4rem;
 	margin-right: auto;
 }
-.hero-example img {
-	max-width: 80%;
+
+
+/* ==========================================================================
+Cards
+========================================================================== */
+
+.card-article img {
+	height: 10rem;
+	max-width: 16rem;
+}
+
+.card-article {
+	background-color: lightgray;
+}
+.card-article a {
+	max-width: 45rem;
+	text-decoration: none;
+}
+
+.card-article div {
+	color: var(--color-text);
+}
+
+.card-article h4, .card-article p {
+	margin: 0.6rem 0 0.5rem;
+}
+
+.card-article p {
+	border-bottom: 2px solid gray;
+	max-width: 20rem;
+	padding-bottom: 0.5rem;
+}
+
+.card-profile {
+	background-color: #596566;
+	border: 2px solid #ccc;
+	border-radius: 1.5rem;
+	margin-top: 5rem;
+	max-width: 25rem;
+	padding-top: 7rem;
+	position: relative;
+}
+
+.card-profile a {
+	display: block;
+	text-decoration: none;
+}
+
+.card-profile img {
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px #aaa;
+	margin: auto;
+	max-width: 10rem;
+	position: absolute;
+	top: -5rem;
+	right: 4.5rem;
+}	
+
+.card-profile div {
+	background-color: #bad1cf;
+	border-radius: 0 0 1.5rem 1.5rem;
+	text-align: center;
+	overflow: hidden;
+}
+
+.card-action {
+	position: relative;
+}
+
+ .card-action h5 {
+ 	margin-bottom: 0.5rem;
+ }
+ 
+.card-action div {
+	left: 1rem;
+	max-width: 12rem;
+	position: absolute;
+	top: 2.5rem;
+}
+
+.card-action img {
+	box-shadow: 2px 2px 5px #aaa;
+	max-width: 25rem;
+}
+
+@media (min-width: 520px) {
+	.card-article a {
+		display: flex;
+	}
+
+	.card-article div {
+		display: flex;
+		flex-direction: column;
+		margin-left: 3rem;
+	}
+
+	.card-profile img {
+		right: 7.5rem;
+	}
+}
+
+/* ==========================================================================
+Card Grid 
+========================================================================== */
+
+.card-grid {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	max-width: 65rem;
+	text-align: center;
+}
+
+.card-grid div {
+	padding: 1rem .8rem .5rem;
+}
+
+.card-grid div:nth-child(odd) {
+	background-color: #BEB6C0;
+}
+
+.card-grid div:nth-child(even) {
+	background-color: #DFF2E8;
+}
+
+.card-grid div:nth-child(3) {
+	grid-column: span 2;
+    grid-row: span 1;
+}
+
+.card-grid div:nth-child(4) {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-column: span 1;
+	justify-content: center;
+    grid-row: span 2;
+}
+
+.card-grid div:nth-child(7) {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-column: span 1;
+	justify-content: center;
+    grid-row: span 2;
+}
+
+.card-grid div:last-child {
+	grid-column: span 2;
+    grid-row: span ;
+}
+
+.card-grid img {
+	max-width: 7rem;
+	height: 7rem;
+}
+
+/* ==========================================================================
+Card Callout
+========================================================================== */
+
+.card-callout {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	max-width: 55rem;
+	text-align: center;
+}
+
+.card-callout div {
+	background-color: #E4F2DF;
+	padding: 1rem 0.5rem;
+}
+.card-callout img {
+	width: 12rem;
+	height: 10rem;
+}
+.card-callout div:nth-child(2) {
+	border-left: 2px solid gray;
+	border-right: 2px solid gray;
 }
