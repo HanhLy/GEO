@@ -225,7 +225,7 @@ main {
 	
 	main {
 		margin: auto;
-		max-width: 50rem;
+		max-width: 60rem;
 	}
 	
 }
@@ -491,6 +491,14 @@ input[type="submit"]:active {
 	cursor: pointer;
 }
 
+@media (min-width: 650px) {
+	form {
+		margin: auto;
+	}
+	button, input[type="submit"] {
+		margin-left: 7rem;
+	}
+}
 
 /* ==========================================================================
  Notifications
@@ -514,15 +522,10 @@ input[type="submit"]:active {
 
 .notification img:last-child {
 	height: 20px;
-	/*padding-left: 2rem;*/
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
 	width: 20px; 
-}
-
-.cancel {
-	align-items: flex-end;
 }
 
 .error-notification {
@@ -570,8 +573,7 @@ Cards
 ========================================================================== */
 
 .card-article img {
-	height: 10rem;
-	max-width: 16rem;
+	max-width: 9rem;
 }
 
 .card-article {
@@ -618,7 +620,7 @@ Cards
 	max-width: 10rem;
 	position: absolute;
 	top: -5rem;
-	right: 4.5rem;
+	right: 3rem;
 }	
 
 .card-profile div {
@@ -688,39 +690,46 @@ Card Grid
 	background-color: #DFF2E8;
 }
 
-.card-grid div:nth-child(3) {
-	grid-column: span 2;
-    grid-row: span 1;
-}
-
 .card-grid div:nth-child(4) {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	grid-column: span 1;
 	justify-content: center;
-    grid-row: span 2;
+ 
 }
 
 .card-grid div:nth-child(7) {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	grid-column: span 1;
-	justify-content: center;
-    grid-row: span 2;
-}
-
-.card-grid div:last-child {
-	grid-column: span 2;
-    grid-row: span ;
+	justify-content: center; 
 }
 
 .card-grid img {
-	max-width: 7rem;
-	height: 7rem;
+	max-width: 9rem;
+	height: 9rem;
 }
 
+@media (min-width: 650px) {
+	.card-grid div:nth-child(3) {
+		grid-column: span 2;
+	    grid-row: span 1;
+	}
+
+	.card-grid div:nth-child(4) {
+		grid-column: span 1;
+		  grid-row: span 2;
+	}
+
+	.card-grid div:nth-child(7) {
+		grid-column: span 1;
+		grid-row: span 2;
+	}
+	.card-grid div:last-child {
+	grid-column: span 2;
+    grid-row: span ;
+}
+}
 /* ==========================================================================
 Card Callout
 ========================================================================== */
@@ -736,11 +745,20 @@ Card Callout
 	background-color: #E4F2DF;
 	padding: 1rem 0.5rem;
 }
+
 .card-callout img {
 	width: 12rem;
 	height: 10rem;
 }
+
 .card-callout div:nth-child(2) {
-	border-left: 2px solid gray;
-	border-right: 2px solid gray;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
+@media (min-width: 650px) {
+	.card-callout div:nth-child(2) {
+		border-left: 2px solid gray;
+		border-right: 2px solid gray;
+	}
 }
