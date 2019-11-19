@@ -170,8 +170,8 @@ header ul {
 
 .current-page {
 	background-color: #587884;
-	border-radius: 0.5rem;
-	padding: 0.2rem;
+	border-radius: .5rem;
+	padding: .2rem;
 }
 
 /* ==========================================================================
@@ -341,7 +341,7 @@ main {
 ========================================================================== */
 summary {
 	border-bottom: 2px solid #a98d49;
-	padding: 0.5rem;
+	padding: .5rem;
 }
 
 details div{
@@ -379,7 +379,7 @@ dialog {
 
 .open-modal {
 	border: 2px solid rgba(0,0,10, .5);
-	border-radius: 0.5rem;
+	border-radius: .5rem;
 	padding: 1rem;
 }
 
@@ -435,16 +435,16 @@ label {
 
 input {
 	border: 1px solid black;
-	border-radius: 0.3rem;
+	border-radius: .3rem;
 	display: block;
-	margin: 0.2rem 0;
-	padding-bottom: 0.5rem;
+	margin: .2rem 0;
+	padding-bottom: .5rem;
 }
 
 textarea {
 	border: 1px solid black;
-	border-radius: 0.5rem;
-	margin: 0.2rem 0;
+	border-radius: .5rem;
+	margin: .2rem 0;
 	min-height: 3rem;
 }
 
@@ -477,7 +477,7 @@ button, input[type="submit"] {
 	background-color: var(--color-pink);
 	color: white;
 	min-width: inherit;
-	padding: 0.5rem 0.5rem;
+	padding: .5rem .5rem;
 }
 
 input[type="submit"]:hover {
@@ -523,8 +523,8 @@ input[type="submit"]:active {
 .notification img:last-child {
 	height: 20px;
 	position: absolute;
-	top: 0.5rem;
-	right: 0.5rem;
+	top: .5rem;
+	right: .5rem;
 	width: 20px; 
 }
 
@@ -589,13 +589,13 @@ Cards
 }
 
 .card-article h4, .card-article p {
-	margin: 0.6rem 0 0.5rem;
+	margin: .6rem 0 .5rem;
 }
 
 .card-article p {
 	border-bottom: 2px solid gray;
 	max-width: 20rem;
-	padding-bottom: 0.5rem;
+	padding-bottom: .5rem;
 }
 
 .card-profile {
@@ -635,7 +635,7 @@ Cards
 }
 
  .card-action h5 {
- 	margin-bottom: 0.5rem;
+ 	margin-bottom: .5rem;
  }
  
 .card-action div {
@@ -743,7 +743,7 @@ Card Callout
 
 .card-callout div {
 	background-color: #E4F2DF;
-	padding: 1rem 0.5rem;
+	padding: 1rem .5rem;
 }
 
 .card-callout img {
